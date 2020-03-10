@@ -1,0 +1,55 @@
+/* to create new database */
+create database patientdb;
+
+
+/* to connect database patientdb */
+\c patientdb;
+
+
+/* to create tables */
+create table temppatient(
+ tpid varchar(20) primary key,
+ name varchar(30) not null,
+ age int not null,
+ gender char(10) not null,
+ phoneno varchar(15) not null,
+ address text[]
+);
+
+create table perpatient(
+ ppid varchar(20) primary key,
+ name varchar(30) not null,
+ age int not null,
+ gender char(10) not null,
+ phoneno varchar(15) not null,
+ address text[]
+);
+
+create table doctor(
+ doctorid varchar(20) primary key,
+ name varchar(20) not null,
+ speciality varchar(20),
+ intime time not null,
+ outtime time not null,
+ fees float not null
+);
+
+create table client(
+ clientid varchar(20) primary key,
+ name varchar(30) not null,
+ age int not null
+);
+
+create table permanentdiseasedetails(
+ perdisid varchar(20) references perpatient(ppid) on delete cascade on update cascade,
+ disease varchar(20),
+ prescription varchar(20),
+ medicine varchar(20)
+);
+
+create table permanentslot(
+ slotid varchar(20) references perpatient(ppid) on delete cascade on update cascade,
+ slotno int not null,
+ slotdate date not null,
+ primary key(slotid,slotno,slotdate)
+);

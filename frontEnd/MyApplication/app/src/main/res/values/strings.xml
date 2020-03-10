@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="one_time_registration">ONE TIME REGISTRATION</string>
 </resources>

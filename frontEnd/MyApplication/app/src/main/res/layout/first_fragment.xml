@@ -25,11 +25,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center">
+A
             <Button
-                android:layout_width="100dp"
+                android:id="@+id/btn1"
+                android:layout_width="179dp"
                 android:layout_height="100dp"
-                android:text="enter"
-                android:id="@+id/btn1"/>
+                android:text="enter" />
         </LinearLayout>
     </LinearLayout>
 

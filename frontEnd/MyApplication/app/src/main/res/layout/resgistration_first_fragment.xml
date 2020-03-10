@@ -8,11 +8,11 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="365dp"
+            android:layout_height="100dp"
             android:gravity="center">
 
             <Button
-                android:id="@+id/doc_details"
+                android:id="@+id/permentReg"
                 android:layout_width="200dp"
                 android:layout_height="100dp"
                 android:text="Permanent Patient Registration"
@@ -22,7 +22,7 @@
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="365dp"
+            android:layout_height="100dp"
             android:gravity="center">
             <Button
 
@@ -30,7 +30,7 @@
                 android:layout_height="80dp"
                 android:text="One time registration"
                 android:textSize="20dp"
-                android:id="@+id/reg_btn"
+                android:id="@+id/onetime"
                 ></Button>
 
         </LinearLayout>

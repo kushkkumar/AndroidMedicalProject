@@ -17,7 +17,12 @@ public class onTimeActivity extends Fragment {
 
 
 
-
+        view.findViewById(R.id.onetime_form_submit_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new bookslotFragmentActivity()).addToBackStack(null).commit();
+            }
+        });
         return view;
 
     }

@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Only for permanent Patient"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,13 +114,13 @@
         android:hint="Eneter the address"
         android:gravity="center"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/permanent_form_submit_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox7" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/permanent_form_submit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"

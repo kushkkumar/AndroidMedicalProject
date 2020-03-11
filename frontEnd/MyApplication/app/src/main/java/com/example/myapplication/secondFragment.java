@@ -25,10 +25,14 @@ public class secondFragment extends Fragment {
         view.findViewById(R.id.reg_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new selectRegistration()).addToBackStack(null).commit();
 
-
+            }
+        });
+        view.findViewById(R.id.qr_generator).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new qrFragmentActivity()).addToBackStack(null).commit();
             }
         });
 

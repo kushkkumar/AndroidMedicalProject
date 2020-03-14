@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
@@ -40,6 +41,7 @@ public class qrcodePreviewFragmentActivity extends Fragment {
             @Override
             public void onClick(View v) {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new secondFragment()).commit();
+                clearBackStack();
             }
         });
 
@@ -48,4 +50,13 @@ public class qrcodePreviewFragmentActivity extends Fragment {
 
         return view;
     }
-}
+
+    private void clearBackStack() {
+
+            FragmentManager fm = getActivity().getSupportFragmentManager();
+            for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
+                fm.popBackStack();
+            }
+        }
+
+    }

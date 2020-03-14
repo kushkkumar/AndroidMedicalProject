@@ -19,7 +19,7 @@ public class bookslotFragmentForPermentActivity extends Fragment {
         view.findViewById(R.id.get_slot_number).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clearStack();
+
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new qrcodePreviewFragmentActivity()).addToBackStack(null).commit();
 
 
@@ -32,10 +32,5 @@ public class bookslotFragmentForPermentActivity extends Fragment {
         return view;
     }
 
-    private void clearStack() {
-        FragmentManager fm = getActivity().getSupportFragmentManager();
-        for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
-            fm.popBackStack();
-        }
-    }
+
 }

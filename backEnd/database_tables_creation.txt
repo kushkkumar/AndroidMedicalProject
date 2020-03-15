@@ -1,31 +1,29 @@
-/* to create new database */
-create database patientdb;
-
-
-/* to connect database patientdb */
-\c patientdb;
+/* heroku cli */
+heroku pg:psql postgresql-cubic-92674 --app young-sea-56344
 
 
 /* to create tables */
 create table temppatient(
  tpid varchar(20) primary key,
  name varchar(30) not null,
- age int not null,
+ bdate date not null,
  gender char(10) not null,
  phoneno varchar(15) not null,
- address text[]
+ email varchar(30),
+ address varchar(30)
 );
 
-create table perpatient(
+create table permanentpatient(
  ppid varchar(20) primary key,
  name varchar(30) not null,
- age int not null,
+ bdate date not null,
  gender char(10) not null,
  phoneno varchar(15) not null,
- address text[]
+ email varchar(30),
+ address varchar(30)
 );
 
-create table doctor(
+create table doctordetails(
  doctorid varchar(20) primary key,
  name varchar(20) not null,
  speciality varchar(20),
@@ -41,14 +39,21 @@ create table client(
 );
 
 create table permanentdiseasedetails(
- perdisid varchar(20) references perpatient(ppid) on delete cascade on update cascade,
+ perdisid varchar(20) references permanentpatient(ppid) on delete cascade on update cascade,
  disease varchar(20),
  prescription varchar(20),
  medicine varchar(20)
 );
 
 create table permanentslot(
- slotid varchar(20) references perpatient(ppid) on delete cascade on update cascade,
+ slotid varchar(20) references permanentpatient(ppid) on delete cascade on update cascade,
+ slotno int not null,
+ slotdate date not null,
+ primary key(slotid,slotno,slotdate)
+);
+
+create table tempslot(
+ slotid varchar(20) references temppatient(tpid) on delete cascade on update cascade,
  slotno int not null,
  slotdate date not null,
  primary key(slotid,slotno,slotdate)

@@ -1,1 +1,11 @@
 //All the backend procedures or what is been done should be updated with a date 
+
+
+14th march 2020
+
+the database as postgresql which is hosted in the heroku online server
+and the database is handled by the nodejs
+the front end that is done in android studio is handled by the nodejs
+the progress: the 2 patient form is linked to the database using nodejs and the data are stored in the database in the server
+
+

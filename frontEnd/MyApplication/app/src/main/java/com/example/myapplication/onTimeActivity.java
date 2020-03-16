@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -54,6 +55,11 @@ public class onTimeActivity extends Fragment {
         female=view.findViewById(R.id.radioButton2);
         other=view.findViewById(R.id.radioButton3);
 
+        RadioGroup r=view.findViewById(R.id.radioGroup);
+        int radioButtonId=r.getCheckedRadioButtonId();
+        final RadioButton radioButton=view.findViewById(radioButtonId);
+
+
         if(male.isChecked()){
             selectradio=male.getText().toString();
         }
@@ -62,7 +68,6 @@ public class onTimeActivity extends Fragment {
         }
         if(other.isChecked())
             selectradio=other.getText().toString();
-
 
 
         view.findViewById(R.id.onetime_form_submit_btn).setOnClickListener(new View.OnClickListener() {
@@ -75,7 +80,7 @@ public class onTimeActivity extends Fragment {
                 map.put("email",email.getText().toString());
                 map.put("phone",phone.getText().toString());
                 map.put("address",address.getText().toString());
-                map.put("gender", selectradio);
+                map.put("gender", selectradio.toString());
 
                 Call<Void> call=retrofitInterface.executetempResgitration(map);
                 call.enqueue(new Callback<Void>() {

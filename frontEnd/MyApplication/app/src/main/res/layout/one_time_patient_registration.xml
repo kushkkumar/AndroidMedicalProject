@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent">
 
     <EditText
@@ -13,6 +14,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the Phone number"
+        android:textColor="@color/string"
         android:inputType="phone"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +29,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the Email"
+        android:textColor="@color/string"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/tpphone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +44,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the Birth date"
+        android:textColor="@color/string"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/tpemail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +59,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Enter the Name"
+        android:textColor="@color/string"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/tpbod"
@@ -67,9 +72,9 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="39dp"
         android:gravity="center"
         android:text="@string/one_time_registration"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tpname"
@@ -82,10 +87,12 @@
         android:id="@+id/radioGroup"
         android:layout_width="397dp"
         android:layout_height="36dp"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/tpaddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tpphone">
 
@@ -119,6 +126,7 @@
         android:gravity="center"
         android:inputType="textMultiLine"
         android:hint="Enter the address"
+        android:textColor="@color/string"
         app:layout_constraintBottom_toTopOf="@+id/onetime_form_submit_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -127,9 +135,11 @@
 
     <Button
         android:id="@+id/onetime_form_submit_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="180dp"
+        android:layout_height="58dp"
+        android:background="@drawable/btnbackground"
+        android:text="Submit"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

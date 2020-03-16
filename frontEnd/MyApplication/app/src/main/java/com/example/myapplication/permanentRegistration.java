@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import java.util.HashMap;
@@ -88,8 +90,6 @@ public class permanentRegistration extends Fragment {
                                 Toast.makeText(getContext(),"Not inserted",Toast.LENGTH_SHORT).show();
 
                             }
-
-
                         }
 
                         @Override
@@ -108,7 +108,9 @@ public class permanentRegistration extends Fragment {
     }
 
     private void shiftActivity() {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new bookslotFragmentForPermentActivity()).addToBackStack(null).commit();
+
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new dummy()).addToBackStack(null).commit();
 
     }
+
 }

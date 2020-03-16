@@ -15,4 +15,10 @@ public interface RetrofitInterface {
     Call<Void> executePerRegistraion(@Body HashMap<String,String> map);
 
 
+    @POST("/bookSlotPermanent")
+    Call<permanentPateintResult> executebookSlotPermanent(@Body HashMap<String,String> map);
+
+    @POST("/confirmPermanent")
+    Call<storeresultpermanent> confirmRegistraion(@Body HashMap<String,String> map);
+
 }

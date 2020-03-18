@@ -12,15 +12,37 @@ const client = new Client({
   client.connect();
 
 
-var counttp=1;
-client.query("SELECT * FROM temppatient",(err,res)=>{
-    counttp=counttp+res.rowCount;
-   // console.log(counttp)
-})
-//console.log(counttp);
+
+
+  client.query('SELECT * FROM doctordetails;', (err, res) => {
+    if (err) throw err;
+   console.log(JSON.stringify(res.rows))
+   
+  });
+
+
+
+
 
 
 //all the request from the android that are sent
+
+
+app.get('/doctordetails',(request,response)=>{
+
+
+    client.query('SELECT * FROM doctordetails;', (err, res) => {
+        if (err) throw err;
+       response.send(JSON.stringify(res.rows));
+       
+      });
+
+})
+
+
+
+
+
 
 app.post('/temppatientRegistration',(request,response)=>{
     tempPatientRegistration(request,response);
@@ -39,6 +61,8 @@ app.post('/confirmPermanent',(request,response)=>{
     confirmPermanent(request,response);
 })
 
+
+
 //the funtions that are needed to send back the information for the android
 
 
@@ -46,9 +70,6 @@ function confirmPermanent(request,response){
     client.query("SELECT * FROM permanentpatient",(err,res)=>{
         var c="pt";
         c=c+(res.rowCount.toString());
-
-
-
         client.query("SELECT * FROM permanentpatient WHERE ppid='"+c+"';",(err,result)=>{
             if(err) throw err
     
@@ -56,10 +77,7 @@ function confirmPermanent(request,response){
                 response.status(410).send();
             }
             else{
-    
-            
             response.status(210).send(JSON.stringify(result.rows[0]));
-           
         }
         
         })
@@ -71,21 +89,16 @@ function confirmPermanent(request,response){
 
 function bookSlotPermanent(request,response){
     const ppid=request.body.ppid;
-   
-
     client.query("SELECT * FROM permanentpatient WHERE ppid='"+ppid+"';",(err,result)=>{
         if(err) throw err
 
         if(result.rowCount==0){
             response.status(404).send();
         }
-        else{
-
-        
+        else{       
         response.status(202).send(JSON.stringify(result.rows[0]));
        
-    }
-    
+    }  
     })
 }
 
@@ -136,6 +149,9 @@ client.query("INSERT INTO temppatient (tpid,name,bdate,gender,phoneno,email,addr
     })
 
 }
+
+
+//table view in the browser
 
 app.get('/',(req,response)=>{
 
@@ -192,4 +208,4 @@ app.get('/table/permanentslot',(request,response)=>{
       });
 })
 
-app.listen(process.env.PORT||6005,()=>console.log("its working "))
+app.listen(process.env.PORT||6003,()=>console.log("its working "))

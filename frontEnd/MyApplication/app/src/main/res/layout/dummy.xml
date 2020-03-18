@@ -9,23 +9,28 @@
 
     <Button
         android:id="@+id/dummy"
-        android:layout_width="190dp"
-        android:layout_height="55dp"
+        android:layout_width="252dp"
+        android:layout_height="63dp"
         android:background="@drawable/btnbackground"
         android:text="Confirm"
-        android:textSize="20dp"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/confirm" />
 
     <TextView
         android:id="@+id/t1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="405dp"
+        android:layout_height="93dp"
+        android:background="@drawable/card"
+        android:fontFamily="@font/amarante"
         android:text="Confirmation page"
-        android:textSize="35dp"
         android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +38,7 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Write anything to confirm"
         android:textSize="20dp"
@@ -41,6 +46,9 @@
         app:layout_constraintBottom_toTopOf="@+id/confirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/card"
+        android:fontFamily="@font/amarante"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@+id/t1"></TextView>
 
     <EditText

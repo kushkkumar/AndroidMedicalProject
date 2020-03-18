@@ -4,6 +4,26 @@
     android:background="@drawable/background"
     android:layout_height="match_parent">
     <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="DASHBOARD"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:background="@drawable/card"
+            android:textColor="@color/black"
+            android:fontFamily="@font/amarante"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+    <LinearLayout
         android:layout_marginTop="200dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

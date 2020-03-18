@@ -9,16 +9,18 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Only for permanent Patient"
+        android:layout_width="405dp"
+        android:layout_height="70dp"
+        android:background="@drawable/card"
+        android:fontFamily="@font/amarante"
         android:gravity="center"
+        android:text="Only for permanent Patient"
         android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/pname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textSize="30dp"
-        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText

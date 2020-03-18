@@ -19,7 +19,9 @@ public class secondFragment extends Fragment {
         view.findViewById(R.id.doc_details).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(),"No doctor details are entered",Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new doctorDetailsFragmentActivity()).addToBackStack(null).commit();
+
+
             }
         });
         view.findViewById(R.id.reg_btn).setOnClickListener(new View.OnClickListener() {

@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#ED0C0C</color>
     <color name="colorPrimaryDark">#BA1010</color>
-    <color name="colorAccent">#0320DA</color>
+    <color name="colorAccent">#D50000</color>
     <color name="black">#000000</color>
     <color name="string">#292727</color>
+    <color name="card">#EF6C00</color>
 </resources>

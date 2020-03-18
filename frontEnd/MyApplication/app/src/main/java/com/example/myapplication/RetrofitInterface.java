@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface RetrofitInterface {
@@ -20,5 +22,8 @@ public interface RetrofitInterface {
 
     @POST("/confirmPermanent")
     Call<storeresultpermanent> confirmRegistraion(@Body HashMap<String,String> map);
+
+    @GET("doctordetails")
+    Call<List<doctordetailresult>> getdoctorDetails();
 
 }

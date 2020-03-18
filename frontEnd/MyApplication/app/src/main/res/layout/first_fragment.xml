@@ -12,15 +12,18 @@
             android:layout_height="200dp"
             android:orientation="vertical"
             android:gravity="center">
+
             <TextView
+                android:layout_width="443dp"
+                android:layout_height="115dp"
+                android:background="@drawable/card"
+                android:fontFamily="@font/amarante"
                 android:gravity="center"
+                android:text="Hello There!!!"
                 android:textColor="@color/black"
                 android:textFontWeight="500"
-                android:textStyle="bold"
                 android:textSize="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello there!!!"></TextView>
+                android:textStyle="bold"></TextView>
 
         </LinearLayout>
         <LinearLayout
@@ -31,11 +34,11 @@ A
 
             <Button
                 android:id="@+id/btn1"
-                android:layout_width="267dp"
-                android:layout_height="74dp"
+                android:layout_width="341dp"
+                android:layout_height="104dp"
                 android:background="@drawable/btnbackground"
                 android:text="enter"
-                android:textSize="20dp" />
+                android:textSize="30dp" />
         </LinearLayout>
     </LinearLayout>
 

@@ -20,10 +20,7 @@ public class bookslotFragmentActivity extends Fragment {
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new qrcodePreviewFragmentActivity()).addToBackStack(null).commit();
                 }
             });
-
-
-
-
+            
         return view;
     }
 }

@@ -8,14 +8,16 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:textColor="@color/black"
         android:id="@+id/textView4"
-        android:layout_width="413dp"
-        android:layout_height="53dp"
+        android:layout_width="408dp"
+        android:layout_height="81dp"
+        android:background="@drawable/card"
         android:gravity="center"
         android:text="YOUR QR CODE IS: "
-        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textSize="35dp"
         android:textStyle="bold"
+        android:fontFamily="@font/amarante"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -41,6 +43,7 @@
         android:textSize="20dp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:background="@drawable/card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/patientid"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,10 +51,12 @@
 
     <TextView
         android:id="@+id/patientid"
-        android:layout_width="118dp"
+        android:layout_width="70dp"
         android:layout_height="36dp"
         android:gravity="center"
         android:textSize="20dp"
+        android:text=""
+        android:background="@drawable/card"
         android:textColor="@color/string"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -70,8 +70,10 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="408dp"
+        android:layout_height="58dp"
+        android:background="@drawable/card"
+        android:fontFamily="@font/amarante"
         android:gravity="center"
         android:text="@string/one_time_registration"
         android:textColor="@color/black"

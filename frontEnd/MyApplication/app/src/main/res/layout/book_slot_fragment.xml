@@ -26,13 +26,13 @@
 
     <Spinner
         android:id="@+id/spinner_doc_details"
-        android:layout_width="409dp"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
         app:layout_constraintBottom_toTopOf="@+id/get_slot_number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/get_slot_number"
@@ -44,7 +44,6 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner_doc_details" />
 </androidx.constraintlayout.widget.ConstraintLayout>

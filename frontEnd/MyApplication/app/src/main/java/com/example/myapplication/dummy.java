@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,8 @@ public class dummy extends Fragment {
 
                             setter setter=new setter();
                             setter.setPtid(storeresultpermanent.getPpid());
+
+
 
                             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame1,new previewSamplePermanentQrActivity()).commit();
 
